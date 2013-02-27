@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	{% for site in sites %}
+		{{site.SiteId}}
+		<iframe border='0' src='{{site.LogoutUrl}}'>
+		</iframe>
+		</br>
+	{% end %}
+	<h1>Log out</h1>
+{% end %}

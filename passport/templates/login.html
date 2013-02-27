@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<form action="{{request.uri}}" method="post">
+		{{ xsrf_form_html() }}
+		<p>
+			<lable>Email</lable>
+			<input type="text" name="email" id="email">
+		</p>
+		<p>
+			<label>Password</label>
+			<input type="password" name="password" id="password" />
+		</p>
+		<p><input type="submit" value="submit" class="button"></p>
+	</form>
+{% end %}
